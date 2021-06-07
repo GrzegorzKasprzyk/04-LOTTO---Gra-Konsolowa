@@ -28,23 +28,31 @@ namespace LOTTO___Gra_Konsolowa
                     dzien++;
                     int losow = 0;
                     List<int[]> kupon = new List<int[]>();
+                   
                     do
                     {
                         Console.Clear();
                         Console.WriteLine("DZIEŃ: {0} ", dzien);
-                        Console.WriteLine("\nWitaj w grze LOTTO, dziś do wygrania jest mnóstwo siana - {0} zł. \nKto wie, może to Tobie się poszcześci i Twojemu szefowi z zazdrości szczena zachrzęści", KUMULACJA);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nWitaj w grze LOTTO, dziś do wygrania jest mnóstwo siana - {0} zł. \nKto wie, może to Tobie się poszcześci i Twojemu szefowi z zazdrości szczena zachrzęści:)", KUMULACJA);
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
                         Console.WriteLine("\nStan Konta: {0} zł", pieniądze);
+
                         WyswietlKupon(kupon);
+                        Console.ResetColor();
+
                         //MENU
 
                         if (pieniądze >= 3 && losow < 8)
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
                         {
-                            Console.WriteLine("1. - Postaw nowy los - 3zł [{0}/8]", losow + 1);
+                            Console.WriteLine("\n1. - Postaw nowy los - 3zł [{0}/8]", losow + 1);
 
                         }
 
                         Console.WriteLine("2. - Sprawdź kupon - losowanie");
                         Console.WriteLine("3. - Zakończ grę");
+                        Console.ResetColor();
                         //MENU
                         wybor = Console.ReadKey().Key;
                         if (wybor == ConsoleKey.D1 && pieniądze >= 3 && losow < 8)
@@ -109,7 +117,10 @@ namespace LOTTO___Gra_Konsolowa
             }
 
             Array.Sort(wylosowane);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Wylosowane liczby to: ");
+            Console.ResetColor();
+
             foreach (int liczba in wylosowane)
             {
                 Console.Write(liczba + ", ");
@@ -155,7 +166,9 @@ namespace LOTTO___Gra_Konsolowa
         {
             int[] wygrane = new int[4];
             int i = 0;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("\n\nTWÓJ KUPON: ");
+            Console.ResetColor();
             foreach (int[] los in kupon)
             {
                 i++;
@@ -193,7 +206,9 @@ namespace LOTTO___Gra_Konsolowa
                         wygrane[3]++;
                         break;
                 }
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine(" - Trafiono {0}/6 liczb", trafien);
+                Console.ResetColor();
 
             }
             return wygrane;
@@ -207,7 +222,10 @@ namespace LOTTO___Gra_Konsolowa
             {
                 liczba = -1;
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Postawione liczby: ");
+                Console.ResetColor();
+
                 foreach (int l in liczby)
                 {
                     if (l > 0)
@@ -215,7 +233,9 @@ namespace LOTTO___Gra_Konsolowa
                         Console.WriteLine(l + ", ");
                     }        
                 }
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("\nWybierz liczbę od 1 do 49:");
+                Console.ResetColor();
                 Console.WriteLine("{0}/6: ", i + 1);
                 bool prawidlowa = int.TryParse(Console.ReadLine(), out liczba);
                 if (prawidlowa && liczba >= 1 && liczba <= 49 && !liczby.Contains(liczba))
@@ -224,7 +244,9 @@ namespace LOTTO___Gra_Konsolowa
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Niestety, błędna liczba.");
+                    Console.ResetColor();
                     i--;
                     Console.ReadKey();
                 }
@@ -238,12 +260,16 @@ namespace LOTTO___Gra_Konsolowa
         {
             if (kupon.Count == 0)
             {
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
                 Console.WriteLine("Nie postawiłeś jeszcze żadnych losów.");
+                Console.ResetColor();
             }
             else
             {
                 int i = 0;
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine("\nTWÓJ KUPON:  ");
+                Console.ResetColor();
                 foreach (int[] los in kupon)
                 {
                     i++;

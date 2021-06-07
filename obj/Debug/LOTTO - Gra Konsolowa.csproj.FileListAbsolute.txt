@@ -5,3 +5,10 @@ C:\Users\grzes\Desktop\LOOTTOO\LOTTO - Gra Konsolowa\obj\Debug\LOTTO - Gra Konso
 C:\Users\grzes\Desktop\LOOTTOO\LOTTO - Gra Konsolowa\obj\Debug\LOTTO - Gra Konsolowa.csproj.CoreCompileInputs.cache
 C:\Users\grzes\Desktop\LOOTTOO\LOTTO - Gra Konsolowa\obj\Debug\LOTTO - Gra Konsolowa.exe
 C:\Users\grzes\Desktop\LOOTTOO\LOTTO - Gra Konsolowa\obj\Debug\LOTTO - Gra Konsolowa.pdb
+C:\Users\grzes\Desktop\Symulacja LOTTO\bin\Debug\LOTTO - Gra Konsolowa.exe.config
+C:\Users\grzes\Desktop\Symulacja LOTTO\bin\Debug\LOTTO - Gra Konsolowa.exe
+C:\Users\grzes\Desktop\Symulacja LOTTO\bin\Debug\LOTTO - Gra Konsolowa.pdb
+C:\Users\grzes\Desktop\Symulacja LOTTO\obj\Debug\LOTTO - Gra Konsolowa.csprojAssemblyReference.cache
+C:\Users\grzes\Desktop\Symulacja LOTTO\obj\Debug\LOTTO - Gra Konsolowa.csproj.CoreCompileInputs.cache
+C:\Users\grzes\Desktop\Symulacja LOTTO\obj\Debug\LOTTO - Gra Konsolowa.exe
+C:\Users\grzes\Desktop\Symulacja LOTTO\obj\Debug\LOTTO - Gra Konsolowa.pdb
